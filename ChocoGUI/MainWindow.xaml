@@ -15,40 +15,40 @@
         <StackPanel Grid.Row="0" Grid.Column="0" Margin="10">
             <TextBlock Text="ChocoDelights kínálat" FontSize="18" FontWeight="Bold" Margin="0,0,0,10" HorizontalAlignment="Center"/>
             <TextBlock x:Name="lblHowManyTypesToChooseFrom" Text="különböző termék típusunk van." FontSize="12" Margin="0,0,0,10" HorizontalAlignment="Center"/>
-            <TextBlock Text="Legolcsóbb termék:" FontSize="14" Margin="0,0,0,40"/>
-            <TextBlock Text="Ajánlatunk:" FontSize="14" Margin="0,0,0,40"/>
+            <TextBlock x:Name="lblCheapestProduct" Text="Legolcsóbb termék:" FontSize="14" Margin="0,0,0,40"/>
+            <TextBlock x:Name="lblRecommendedProduct" Text="Ajánlatunk:" FontSize="14" Margin="0,0,0,40"/>
             <TextBlock Text="Írja be a keresett csokoládé típusát:" FontSize="12" Margin="0,0,0,5"/>
-            <TextBox Margin="30,0,10,0"/>
-            <Button Content="Árajánlat készítése" Margin="30,20,10,0"/>
+            <TextBox x:Name="textboxSearchedProductType" Margin="30,0,10,0"/>
+            <Button Content="Árajánlat készítése" Margin="30,20,10,0" Click="btnBidSave_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Row="0" Grid.Column="1" Margin="10">
             <TextBlock Text="Új termék felvétele" FontSize="18" FontWeight="Bold" Margin="0,0,0,15" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                 <TextBlock Text="Új termék neve:"/>
-                <TextBox Width="200"/>
+                <TextBox x:Name="textboxNewProductName" Width="200"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                 <TextBlock Text="Csoki típusa:"/>
-                <TextBox Width="200"/>
+                <TextBox x:Name="textboxNewProductType" Width="200"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                 <TextBlock Text="Ár (Ft):"/>
-                <TextBox Width="200"/>
+                <TextBox x:Name="textboxNewProductPrice" Width="200"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                 <TextBlock Text="Termék típusa:"/>
-                <TextBox Width="200"/>
+                <TextBox x:Name="textboxNewProductCategory" Width="200"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                 <TextBlock Text="Kakaótartalom (%):"/>
-                <TextBox Width="200"/>
+                <TextBox x:Name="textboxNewProductCocoaContent" Width="200"/>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                 <TextBlock Text="Nettó tömeg (g):"/>
-                <TextBox Width="200"/>
+                <TextBox x:Name="textboxNewProductNetWeight" Width="200"/>
             </StackPanel>
-            <Button Content="Új termék felvétele" Margin="0,20,0,0" Width="200"/>
+            <Button Content="Új termék felvétele" Margin="0,20,0,0" Width="200" Click="NewProductButtonClick"/>
         </StackPanel>
     </Grid>
 </Window>
